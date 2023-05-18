@@ -84,23 +84,7 @@ export default function Table() {
           onChange={(e) => setValue(e.target.value)}
         />
       </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Image</th>
-            <th>Name of Rental</th>
-          </tr>
-        </thead>
-        <tbody className="trhover">{tableData()}</tbody>
-      </table>
-      <Pagination
-        pageSize={countPerPage}
-        onChange={updatePage}
-        current={currentPage}
-        total={allData.data.length}
-      />
-      {/* {value && allData.data.length > 0 && (
+      {value && allData.data.length > 0 && (
         <>
           <table>
             <thead>
@@ -118,7 +102,7 @@ export default function Table() {
             total={allData.data.length}
           />
         </>
-      )} */}
+      )}
     </>
   );
 }
